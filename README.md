@@ -3,7 +3,7 @@
 
 题目链接：https://leetcode-cn.com/problems/scramble-string/
 
-![image](https://github.com/taoqiongxing/relation-extraction-syntactic-indicator-lstm-cnn-/blob/master/Can%20Syntactic%20Indicators%20Help%20Relation%20Extraction/%E5%B9%BB%E7%81%AF%E7%89%871.png)
+![image](https://github.com/taoqiongxing/LeetCode-87/blob/master/LeetCode-87.png)
 
     class Solution:
         def isScramble(self, s1: str, s2: str) -> bool:
