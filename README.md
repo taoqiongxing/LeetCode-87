@@ -6,13 +6,19 @@
 
 # Code:
     class Solution:
-        def isScramble(self, s1: str, s2: str) -> bool:
-            if len(s1)==1:
-                return s1==s2
-            mid=len(s1)//2
-            if len(set(s1[:mid])-set(s2[:mid]))==0:
-                return self.isScramble(s1[:mid],s2[:mid]) and self.isScramble(s1[mid:],s2[mid:])
-            elif len(set(s1[:mid])-set(s2[-mid:]))==0:
-                return self.isScramble(s1[:mid],s2[-mid:]) and self.isScramble(s1[mid:],s2[:-mid])
-            else:
+        def isScramble(self, s1: str, s2: str) -> bool:   
+            def func(s1,s2):
+                n=len(s1)
+                if s1==s2:
+                    return True 
+                if n==1:
+                    return False
+                for i in range(1,n):
+                    if func(s1[:i],s2[:i]) and func(s1[i:],s2[i:]):
+                        return True
+                    if func(s1[:i],s2[-i:]) and func(s1[i:],s2[:-i]):
+                        return True
                 return False
+            return func(s1,s2)
+
+### 时间超限，未解决emmmm！！！
