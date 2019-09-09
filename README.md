@@ -21,4 +21,4 @@
                 return False
             return func(s1,s2)
 
-### 时间超限，未解决emmmm！！！
+时间超限，未解决emmmm！！！
